@@ -34,17 +34,15 @@ describe("<Display />", () => {
 
   it("renders strike numbers", () => {
     const {  findAllByText, getByText }= render(<Dashboard />);
-    let button = getByText(/Striike/)
+    let button = getByText(/Hits/)
     
     fireEvent.click(button);
-    findAllByText(/Strike:1/);
+    findAllByText(/Hit:1/);
     fireEvent.click(button);
-    findAllByText(/Strike:2/)
+    findAllByText(/Hit:2/)
     fireEvent.click(button);
-    findAllByText(/Strike:3/)
+    findAllByText(/Hit:3/)
     fireEvent.click(button);
-    findAllByText(/Strike:0/)
-    findAllByText(/Hit:0/)
 
   });
 
